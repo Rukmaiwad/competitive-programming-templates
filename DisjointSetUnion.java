@@ -62,6 +62,16 @@ class DisjointSet {
             parent.set(up_v, up_u);
         }
     }
+
+    // function to find number of components in graph.
+    int numberOfComp(int n){
+        Set<Integer> st = new HashSet<>();
+        for(int i=1;i<=n;i++){
+            st.add(findParent(i));
+        }
+        return st.size();
+        
+    }
 }
 
 class Main {
